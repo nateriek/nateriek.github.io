@@ -141,21 +141,21 @@ ul li a:hover{
     font-size: 1.5rem;
 }
 
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 .contact-details a {
     color: var(--primary-text);
-    text-decoration: none; /* optional: removes underline */
-    transition: 0.3s;
-    font-size: 1.25rem;
+    font-size: 3rem;
+    transition: .3s;
 }
 
 .contact-details a:hover {
     color: var(--primary-color);
-    text-decoration: underline; /* optional: adds underline on hover */
-}
-
-.contact-details strong {
-    color: var(--primary-color);
-    font-size: 1.5rem;
 }
 
 .image{
