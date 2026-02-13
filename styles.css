@@ -3,7 +3,7 @@
 :root {
     --primary-color: #14e8a1;
     --primary-text: #F9FAFB;
-    --nav-color: #9ca3af36;
+    --nav-color: #46494f;
     --primary-background: #111827;
     --max-width: 1200px;
 }
@@ -116,6 +116,22 @@ ul li a:hover{
     padding: 2rem;
 }
 
+.about-section {
+    min-height: 100vh;
+    padding-top: 8rem;
+    background-color: var(--primary-background);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: left;
+}
+
+.about-container {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 
 .content{
     display: flex;
@@ -143,7 +159,7 @@ ul li a:hover{
 
 .description {
     margin-top: 1rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
     color: var(--primary-text);
     margin-bottom: 2rem;
     font-size: 1.5rem;
@@ -173,6 +189,7 @@ ul li a:hover{
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .contact-details a {
@@ -200,16 +217,18 @@ ul li a:hover{
         display: block;
     }
 
+
     ul{
         position: absolute;
         width:100%;
         height: calc(100vh - 85px);
         left: -100%;
-        top: 85px;
+        top: 80px;
         background-color: var(--primary-background);
         flex-direction: column;
         justify-content: justify;
         gap: 3rem;
+        padding-top:5rem;
     }
 
     nav #check:checked ~ ul{
@@ -228,5 +247,13 @@ ul li a:hover{
 
     .image{
         grid-area: 1/1/2/2;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        margin: 0 3rem;
     }
 }
