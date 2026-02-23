@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="portfolio-section">
+        <div class="portfolio-grid">
+
+            <a href="ecg-app.html" class="project-card">
+                <div class="project-image">
+                    <img src="assets/ecg-app.png" alt="ECG App">
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">ECG Analyzer Desktop App</h2>
+                    <p class="project-description">This desktop app takes ECG xml files and 1) plots the ECGs on graph paper, 2) deidentifies the xml files, 3) generates median beats, features, and model predictions. </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyInstaller</span>
+                        <span class="tech-tag">PySide6</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12747319/" class="project-card">
+                <div class="project-image">
+                    <img src="assets/ecgsmartnet.png" alt="ECGSMARTNET">
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">ECGSMARTNET</h2>
+                    <p class="project-description">ECGSMARTNET is a modification of ResNet-18 designed for multi-channel biosignal data. It first learns within-channel features followed by cross-channel features.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <div class="contact-details">
+        <a href="mailto:nateriek98@gmail.com" target="_blank">
+            <i class="ri-mail-line"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nathanriek" target="_blank">
+            <i class="ri-linkedin-box-fill"></i>
+        </a>
+        <a href="https://github.com/nateriek" target="_blank">
+            <i class="ri-github-fill"></i>
+        </a>
+    </div>
+</body>
+</html>

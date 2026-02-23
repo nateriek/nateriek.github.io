@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css">
+        <title>Nathan Riek - ECG App</title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav__content">
+                <label for="check" class="checkbox">
+                    <i class="ri-menu-line"></i>
+                </label>
+                <input type="checkbox" name="check" id="check">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="project-section">
+            <div class="project-container">
+                <h1 class="title"><span>ECG Analyzer Desktop App</span></h1>
+                <p class="description">
+                    ECG Analyzer is a desktop app created in Python using PySide6. The app contains multiple screens, each with different functionality.<br>
+                    1) Home screen<br>
+                    2) License screen<br>
+                    3) ECG plotting screen<br>
+                    4) ECG deidentification screen<br>
+                    5) ECG processing screen<br>
+                </p>
+                <h1 class="title"><span>Home Screen</span></h1>
+                <p class="description">
+                    The home screen is the screen that first appears when you open the app.
+                </p>
+                <img class="proj-image" src="assets/home-screen.png", alt="Home screen">
+
+                <h1 class="title"><span><br>License Screen</span></h1>
+                <p class="description">
+                    The license screen asks the user to browse for a license file (.lic). The license file is generated using a private key.
+                    The license file includes information about expiration date and which tools the user can access. This functionality
+                    was created using python's cryptography library.
+                </p>
+                <img class="proj-image" src="assets/license-screen.png", alt="License screen">
+
+                <h1 class="title"><span><br>Plotting Screen</span></h1>
+                <p class="description">
+                    The plotting screen allows users to select four different plot types:<br>
+                    1) Standard printout<br>
+                    2) 12x1 10-second<br>
+                    3) 3x4 median beat<br>
+                    4) 12x1 median beat<br>
+                    The user can browse for or drag & drop a folder containing ECG files to plot. The user also browses
+                    for a folder to save the images in. A progress bar shows how many files have been processed in 
+                    real time.
+                </p>
+                <img class="proj-image" src="assets/plotting-screen.png", alt="Plotting screen">
+
+                <h1 class="title"><span><br>Deidentification Screen</span></h1>
+                <p class="description">
+                    The deidentification screen allows users to remove sensitive information from their ECG files. The user
+                    browses for or drags & drops a folder containing ECG files and also browses for a folder to save the 
+                    deidentified files in. The deidientifed ECG files are renamed and stored in the selected folder along
+                    with a linkage csv file containing the original and new names of the ECG files. A progress bar shows 
+                    how many files have been processed in real time.
+                </p>
+                <img class="proj-image" src="assets/deidentification-screen.png", alt="Deidentification screen">
+
+                <h1 class="title"><span><br>Processing Screen</span></h1>
+                <p class="description">
+                    The processing screen allows users to generate median beats, features, and model predictions from their ECG files. 
+                    The user browses for or drags & drops a folder containing ECG files and also browses for a folder to save the processed files in. 
+                    Median beats are generated and saved in csv files per ECG. Features are saved in one csv file across all ECGs.
+                    Model predictions are saved in one csv across all ECGs. The user can select which models to generate predictions for.
+                    A progress bar shows how many files have been processed in real time.
+
+                </p>
+                <img class="proj-image" src="assets/process-screen.png", alt="Deidentification screen">
+
+            </div>
+        </section>
+
+        <div class="contact-details">
+            <a href="mailto:nateriek98@gmail.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/nathanriek" target="_blank">
+                <i class="ri-linkedin-box-fill"></i>
+            </a>
+
+            <a href="https://github.com/nateriek" target="_blank">
+                <i class="ri-github-fill"></i>
+            </a>
+        </div>
+    </body>
+</html>
