@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css">
+        <title>Nathan Riek - Chat-ECG</title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav__content">
+                <label for="check" class="checkbox">
+                    <i class="ri-menu-line"></i>
+                </label>
+                <input type="checkbox" name="check" id="check">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="project-section">
+            <div class="project-container">
+                <h1 class="title"><span>Chat-ECG: LLM-powered chatbot using RAG for ECG-related questions</span></h1>
+                <p class="description">
+                    Chat-ECG is a web app deployed on Streamlit Community Cloud. It was designed using a retrieval-augmented 
+                    generation (RAG) pipeline to ensure the LLM produced clinically grounded responses. The application
+                    allows users to ask questions about electrocardiograms with information sourced from the website
+                    Life in the Fastline (<a href="https://litfl.com/ecg-library/" target="_blank">https://litfl.com/ecg-library/</a>).
+                </p>
+                <img class="proj-image" src="assets/chat-ecg-omi.png", alt="Chat-ECG OMI"><br>
+                <img class="proj-image" src="assets/chat-ecg-afib.png", alt="Chat-ECG AFIB"><br>
+
+                <h1 class="title"><span>RAG</span></h1>
+                <p class="description">
+                    ECG-related webpages from Life in the Fastlane were converted into markdown files and stored in a Chroma vector 
+                    database using Cohere's embed-english-v3.0 embedding model. When a user submits a query, the system retrieves
+                    the top 20 most relevant documents from the vector database and then reranks the retrieved documents and selects
+                    the top 5 most relevant documents using the Cohere's rerank-english-v3.0 reranking model. This context is passed
+                    into the LLM to generate a response to the user's query.
+                </p>
+
+                <h1 class="title"><span><br>LLM</span></h1>
+                <p class="description">
+                    The LLM used to generate responses is Qwen 32B via Groq. The system prompt given to the model is provided below:<br><br>
+
+                    You are an expert cardiologist assistant. Carefully read the following context and answer the user's question.<br>
+                    Instructions:<br>
+                    1. Base your answer **only on the provided context**.<br>
+                    2. Include **inline citations for any statements** exactly as URLs in the context, e.g., [https://example.com/article]. Do not include a references section, only inline URLs.<br>
+                    3. If the answer is not in the context, reply: "I could not find the answer in my database."
+                </p>
+                
+                <h1 class="title"><span><br>Web App</span></h1>
+                <p class="description">
+                    The user interface was designed using Streamlit's chat message interface. The python code was committed to a GitHub repository
+                    and then deployed from GitHub to Streamlit Community Cloud.
+                </p>
+
+            </div>
+        </section>
+
+        <div class="contact-details">
+            <a href="mailto:nateriek98@gmail.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/nathanriek" target="_blank">
+                <i class="ri-linkedin-box-fill"></i>
+            </a>
+
+            <a href="https://github.com/nateriek" target="_blank">
+                <i class="ri-github-fill"></i>
+            </a>
+        </div>
+    </body>
+</html>

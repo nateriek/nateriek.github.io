@@ -218,7 +218,8 @@ ul li a:hover{
 }
 
 .proj-image{
-    place-items: center;
+    display: block;
+    margin: 0 auto;
     width: 80%;
 }
 
